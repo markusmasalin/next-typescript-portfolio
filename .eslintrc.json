@@ -1,3 +1,28 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "no-unused-vars":"error",
+    "indent": [2, 2],
+    "quotes": [2, "single", { "avoidEscape": true }],
+    "max-len": [
+      2,
+      {
+        "code": 100,
+        "tabWidth": 2,
+        "ignoreComments": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ]
+   },
+   "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "prettier/prettier": "off"
+      }
+    }
+  ]
 }
