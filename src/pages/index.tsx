@@ -5,9 +5,9 @@ import { NextPage } from 'next';
 import Homepage from '../pages/Homepage';
 import Projects from '../pages/Projects';
 import Contact from '../pages/Contact';
-import Footer from '../components/footer';
+import Footer from '../components/footer/Footer';
 import Recommendations from '../pages/Recommendations';
-import Header from '../components/header';
+import Header from '../components/header/Header';
 import Certificates from '../pages/Certificates';
 
 
