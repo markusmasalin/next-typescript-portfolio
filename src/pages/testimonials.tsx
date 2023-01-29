@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 
-const Recommendations :NextPage = () => {
+const Testimonials :NextPage = () => {
   return (
     <>
       <p> Recommendations
@@ -9,4 +9,4 @@ const Recommendations :NextPage = () => {
   ) 
 }
 
-export default Recommendations;
+export default Testimonials;

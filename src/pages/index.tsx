@@ -1,33 +1,32 @@
 import { useRouter } from 'next/router';
-
 import { NextPage } from 'next';
-
-import Homepage from '../pages/Homepage';
-import Projects from '../pages/Projects';
-import Contact from '../pages/Contact';
-import Footer from '../components/footer/Footer';
-import Recommendations from '../pages/Recommendations';
-import Header from '../components/header/Header';
-import Certificates from '../pages/Certificates';
+import Projects from './Projects';
+import Certificates from './Certificates';
+import Recommendations from './testimonials';
+import Contact from './Contact';
+import Homepage from './Homepage';
 
 
 const Index: NextPage = () => {
   const router = useRouter();
-
-  console.log('router', router.pathname);
-
+  const Page = (() => {
+    switch (router.pathname) {
+    case '/projects':
+      return <Projects />;
+    case '/certificates':
+      return <Certificates />;
+    case '/recommendations':
+      return <Recommendations />;
+    case '/contact':
+      return <Contact />;
+    default:
+      return <Homepage />;
+    }
+  })();
   return (
-    <>
-      <Header />
-      <main>
-        {router.pathname === '/projects' && <Projects />}
-        {router.pathname === '/certificates' && <Certificates />}
-        {router.pathname === '/recommendations' && <Recommendations />}
-        {router.pathname === '/contact' && <Contact />}
-        {router.pathname === '/' && <Homepage />}
-      </main>
-      <Footer />
-    </>
+    <main>
+      {Page}
+    </main>
   );
 }
 

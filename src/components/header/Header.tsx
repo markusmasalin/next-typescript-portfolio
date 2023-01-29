@@ -14,8 +14,8 @@ const Header:NextPage = () => {
       <Link href="/projects">
         <button>Projects</button>
       </Link>
-      <Link href="/recommendations">
-        <button>Recommendations</button>
+      <Link href="/testimonials">
+        <button>Testimonials</button>
       </Link>
       <Link href="/contact">
         <button>Contact</button>
