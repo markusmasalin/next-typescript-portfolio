@@ -1,12 +1,25 @@
-import { NextPage } from 'next';
+import React from 'react'
+import styled from 'styled-components'
 
-const Header:NextPage = () => {
+const FooterWrapper = styled.footer`
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
-  return (
-    <footer>
-     this is a footer
-    </footer>
-  );
-}
+const FooterText = styled.p`
+  margin: 0;
+`
 
-export default Header;
+const Footer = () => (
+  <FooterWrapper>
+    <FooterText>
+      This is the footer
+    </FooterText>
+  </FooterWrapper>
+)
+
+export default Footer
