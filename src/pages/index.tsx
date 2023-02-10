@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router';
 import { NextPage } from 'next';
-import Projects from './Projects';
-import Certificates from './Certificates';
 import Recommendations from './testimonials';
-import Contact from './Contact';
-import Homepage from './Homepage';
+import Projects from './projects';
+import Certificates from './certificates';
+import Contact from './contact';
+import Homepage from './homepage';
 
 
 const Index: NextPage = () => {
