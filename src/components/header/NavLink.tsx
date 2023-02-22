@@ -6,22 +6,33 @@ export type NavLinkProps = {
   href: string
 }
 
-const StyledNavLink = styled.a`
-  color: #fff;
-  text-decoration: none;
-  margin-right: 20px;
+const NavLinkContainer = styled.div`
+  display: flex;
+  text-align: center;  
+  padding: 10px;
+`;
 
+const StyledNavLink = styled.a`
+  display: flex;
+  font-size: 20px;
+  color: #514e4e;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
   &:hover {
-    color: #ccc;
+    color: #b5b3b3;
   }
 `;
 
 const NavLink:NextPage<NavLinkProps> = ({href, name}) => {
 
   return (
-    <StyledNavLink href={href}>
-      <button>{name}</button>
-    </StyledNavLink>
+    <NavLinkContainer>
+      <StyledNavLink href={href}>
+        <span>{name}</span>
+      </StyledNavLink>
+    </NavLinkContainer>
+   
 
   );
 }
